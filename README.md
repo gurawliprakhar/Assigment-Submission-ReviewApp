@@ -1,4 +1,4 @@
-Sure, here is a README for your Assignment and Submission App using React, Spring Boot, and MySQL.
+Sure, I'll update the README to include instructions for adding GitHub and URL links for assignment submissions.
 
 ---
 
@@ -20,7 +20,7 @@ This project is a full-stack web application for managing assignment submissions
 ## Features
 - User registration and authentication
 - Create, view, and manage assignments
-- Submit assignments
+- Submit assignments with GitHub repository and URL link
 - Review and grade assignments
 - User roles: Students and Instructors
 
@@ -98,6 +98,14 @@ For API calls, the frontend uses Axios. The base URL for the API is set in the s
 3. **Role-based access**:
     - **Students** can view and submit assignments.
     - **Instructors** can create, review, and grade assignments.
+4. **Submit an assignment**: When submitting an assignment, students need to provide:
+    - The GitHub repository link
+    - A URL link (if applicable)
+
+### Example Submission
+When submitting an assignment, a student should provide:
+- **GitHub Repository URL**: `https://github.com/username/repository`
+- **Project URL**: `http://example.com/project`
 
 ## Contributing
 Contributions are welcome! Please fork this repository and submit pull requests with meaningful changes. Ensure your code follows the project's coding standards and is well-documented.
@@ -108,7 +116,3 @@ Contributions are welcome! Please fork this repository and submit pull requests 
 4. Push to the branch (`git push origin feature/YourFeature`)
 5. Open a pull request
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
