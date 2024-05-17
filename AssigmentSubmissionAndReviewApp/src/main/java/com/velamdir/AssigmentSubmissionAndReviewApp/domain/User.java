@@ -20,23 +20,29 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Entity
 @Table(name = "users")
 public class User implements UserDetails {
-    @Id
+   
+	private static final long serialVersionUID = 8245121339045212542L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private LocalDate cohortStartDate;
     private String username;
     private String password;
-
-    @OneToMany(mappedBy = "assignedTo", cascade = CascadeType.ALL)
+    private List<Authority> authorities = new ArrayList<>();
+    
+    @OneToMany
     private List<Assignment> assignments = new ArrayList<>();
-
-    // Getters and setters
+    
     public LocalDate getCohortStartDate() {
         return cohortStartDate;
     }
 
-    public void setCohortStartDate(LocalDate cohortStartDate) {
+    public void setAuthorities(List<Authority> authorities) {
+		this.authorities = authorities;
+	}
+
+	public void setCohortStartDate(LocalDate cohortStartDate) {
         this.cohortStartDate = cohortStartDate;
     }
 
